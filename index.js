@@ -41,6 +41,8 @@ function copyText(text) {
     document.execCommand("copy");
 }
 
+/* Event Listeners */
+
 function handleTyping() {
     $('#js-meme-text').on('input', event => {
         showResults();

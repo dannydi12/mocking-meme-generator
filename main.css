@@ -39,8 +39,7 @@ form {
 }
 
 .render-text {
-    margin: 0 auto;
-     
+    margin: 0 auto; 
 }
 
 pre {
@@ -57,7 +56,6 @@ pre {
     position: absolute;
     top: 0;
     right: 0;
-    /* background-color: white; */
     background-image: url('./images/copy.svg');
 }
 
@@ -80,7 +78,6 @@ pre {
 @media (min-width: 1000px) {
     .conversion-section {
        max-width: 50%;
-       justify-content: space-between;
     }
 
     .box {
