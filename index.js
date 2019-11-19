@@ -1,11 +1,3 @@
-/**
- * Generate array with as many elements as there are characters for true or false whether it's upper case.
- * 
- * or
- * 
- * If character index is even/odd make lower case/upper case
- */
-
 function printMeme(text) {
     $('.js-render-text').html(`<p>${text}</p>`);
 }
@@ -28,7 +20,7 @@ function mockify(text) {
 
 function handleTyping() {
     $('#js-meme-text').on('keyup', event => {
-        let text = $('#js-meme-text').val();
+        let text = $('#js-meme-text').val().replace(/[^a-z ]/gi, '');
         text = mockify(text);
         printMeme(text);
     });
@@ -36,7 +28,6 @@ function handleTyping() {
 
 function main() {
     handleTyping();
-    handleRetry();
 }
 
  $(main);

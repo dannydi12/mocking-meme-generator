@@ -3,8 +3,5 @@ textarea {
     width: 400px;
     height: 400px;
     outline: none;
-}
-
-textarea:focus {
-    border: none;
+    border: 3px black solid;
 }
