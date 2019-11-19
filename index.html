@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="./sanitize.css">
     <link rel="stylesheet" href="./main.css">
     <link href="https://fonts.googleapis.com/css?family=Francois+One|Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./animate.css">
     <title>Mocking Spongebob Meme Generator</title>
 </head>
 
 <body>
-    <main>
+    <main class="fadeInUp animated">
         <header>
             <h1>Mocking Spongebob Meme Generator</h1>
             <p>Taking the work out of manually capitalizing text for memes.</p>
@@ -20,12 +21,11 @@
         <section class="conversion-section">
             <form>
                 <label for="js-meme-text">Enter text</label>
-                <textarea id="js-meme-text" maxlength="30000" wrap="soft" placeholder="enter text here" required autofocus></textarea>
+                <textarea class="js-sizing box" id="js-meme-text" maxlength="30000" wrap="soft" required autofocus></textarea>
             </form>
-            <form>
-                <label for="js-meme-result">Resulting text</label>
-                <textarea class="js-render-text" id="js-meme-result" maxlength="30000" wrap="soft" readonly></textarea>
-            </form>
+            <hr class="fadeInUp animated js-toggle hidden black-line">
+            <div class="fadeInUp animated hidden js-toggle js-render-text box render-text">
+            </div>
         </section>
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
