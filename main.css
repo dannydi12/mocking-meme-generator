@@ -48,6 +48,17 @@ pre {
     color: #000;
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
+    user-select: all; 
+}
+
+.copy {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* background-color: white; */
+    background-image: url('./images/copy.svg');
 }
 
 .black-line {
@@ -66,14 +77,9 @@ pre {
     flex-direction: column;
 }
 
-label {
-    display: none;
-}
-
 @media (min-width: 1000px) {
     .conversion-section {
        max-width: 50%;
-       /* min-height: 40vh; */
        justify-content: space-between;
     }
 

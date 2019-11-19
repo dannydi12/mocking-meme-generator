@@ -1,5 +1,5 @@
 function printMeme(text) {
-    $('.js-render-text').html(`<pre>${text}</pre>`);
+    $('.js-render-text').html(`<pre>${text}<div class="hidden copy js-copy"></div></pre>`);
 }
 
 function trueOrFalse(max = 2) {
@@ -19,12 +19,11 @@ function mockify(text) {
 
 function resizing(textarea) {
     if ($(textarea).val().length >= 75) {
-        console.log($(textarea).val().length);
         $('.box').css('text-align', 'left')
     }
-    // Reset field height
-    $('.js-sizing').height('inherit');
-    $('.js-sizing').height(textarea.scrollHeight + 'px');
+
+    $(textarea).height('inherit');
+    $(textarea).height(textarea.scrollHeight + 'px');
 }
 
 function grabText() {
@@ -36,6 +35,12 @@ function showResults() {
         $('.js-toggle').removeClass('hidden')
     }
 }
+
+function copyText(text) {
+    text.select();
+    document.execCommand("copy");
+}
+
 function handleTyping() {
     $('#js-meme-text').on('input', event => {
         showResults();
@@ -45,8 +50,25 @@ function handleTyping() {
     });
 }
 
+function handleMouse() {
+    $('.js-toggle').on('mouseenter', 'pre',  event => {
+        $('.js-copy').removeClass('hidden')
+    });
+    $('.js-toggle').on('mouseleave', event => {
+        $('.js-copy').addClass('hidden')
+    });
+}
+
+function handleCopyClick() {
+    $('.js-toggle').on('click', 'pre',  event => {
+        copyText($('pre'));
+    });
+}
+
 function main() {
     handleTyping();
+    handleMouse();
+    handleCopyClick();
 }
 
 $(main);
