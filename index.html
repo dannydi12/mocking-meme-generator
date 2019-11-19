@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./sanitize.css">
     <link rel="stylesheet" href="./main.css">
+    <link href="https://fonts.googleapis.com/css?family=Francois+One|Open+Sans&display=swap" rel="stylesheet">
     <title>Mocking Spongebob Meme Generator</title>
 </head>
 
@@ -19,11 +20,11 @@
         <section class="conversion-section">
             <form>
                 <label for="js-meme-text">Enter text</label>
-                <textarea id="js-meme-text" maxlength="30000" wrap="soft" required autofocus></textarea>
+                <textarea id="js-meme-text" maxlength="30000" wrap="soft" placeholder="enter text here" required autofocus></textarea>
             </form>
             <form>
                 <label for="js-meme-result">Resulting text</label>
-                <textarea class="js-render-text input-section" id="js-meme-result" maxlength="30000" wrap="soft" readonly></textarea>
+                <textarea class="js-render-text" id="js-meme-result" maxlength="30000" wrap="soft" readonly></textarea>
             </form>
         </section>
     </main>
