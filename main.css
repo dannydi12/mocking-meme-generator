@@ -1,5 +1,4 @@
 body {
-
 }
 
 main {
@@ -18,13 +17,9 @@ textarea {
     border: 3px black solid;
 }
 
-.input-section {
+.conversion-section {
     width: 100%;
-}
-
-.results-section {
-    height: 40vh;
-    text-align: left;
+    max-width: 500px;
 }
 
 label {

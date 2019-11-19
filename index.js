@@ -1,5 +1,5 @@
 function printMeme(text) {
-    $('.js-render-text').html(`<p>${text}</p>`);
+    $('.js-render-text').val(text);
 }
 
 function trueOrFalse(max = 2) {
@@ -17,17 +17,20 @@ function mockify(text) {
     return text.join('');
 }
 
+function grabText() {
+    return $('#js-meme-text').val().replace(/[<>]/gi, '');
+}
 
 function handleTyping() {
     $('#js-meme-text').on('keyup', event => {
-        let text = $('#js-meme-text').val().replace(/[^a-z ]/gi, '');
-        text = mockify(text);
-        printMeme(text);
+        let text = grabText();
+        printMeme(mockify(text));
     });
 }
 
 function main() {
     handleTyping();
+    mockify(grabText());
 }
 
  $(main);

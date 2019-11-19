@@ -16,14 +16,15 @@
             <h1>Mocking Spongebob Meme Generator</h1>
             <p>Taking the work out of manually capitalizing text for memes.</p>
         </header>
-        <section class="input-section">
+        <section class="conversion-section">
             <form>
                 <label for="js-meme-text">Enter text</label>
                 <textarea id="js-meme-text" maxlength="30000" wrap="soft" required autofocus></textarea>
             </form>
-        </section>
-        <section class="js-render-text results-section">
-
+            <form>
+                <label for="js-meme-result">Resulting text</label>
+                <textarea class="js-render-text input-section" id="js-meme-result" maxlength="30000" wrap="soft" readonly></textarea>
+            </form>
         </section>
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
