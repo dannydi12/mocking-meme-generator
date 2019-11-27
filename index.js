@@ -1,5 +1,5 @@
 function printMeme(text) {
-    $('.js-render-text').html(`<pre>${text}<div class="hidden copy js-copy"></div></pre>`);
+    $('.js-render-text').html(`<pre>${text}<div class="hidden copy js-copy fadeInUp animated"></div></pre>`);
 }
 
 function trueOrFalse(max = 2) {
@@ -41,6 +41,12 @@ function copyText(text) {
     document.execCommand("copy");
 }
 
+function notify() {
+    $('.notification').css({'display': 'block'});
+    setTimeout( () => $('.notification').addClass('fadeOutDown'), 3000);
+    setTimeout( () => $('.notification').removeClass('fadeOutDown'), 1000);
+}
+
 /* Event Listeners */
 
 function handleTyping() {
@@ -54,16 +60,17 @@ function handleTyping() {
 
 function handleMouse() {
     $('.js-toggle').on('mouseenter', 'pre',  event => {
-        $('.js-copy').removeClass('hidden')
+        $('.js-copy').removeClass('hidden');
     });
     $('.js-toggle').on('mouseleave', event => {
-        $('.js-copy').addClass('hidden')
+        $('.js-copy').addClass('hidden');
     });
 }
 
 function handleCopyClick() {
     $('.js-toggle').on('click', 'pre',  event => {
         copyText($('pre'));
+        notify();
     });
 }
 
