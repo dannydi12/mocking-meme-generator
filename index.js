@@ -6,6 +6,12 @@ function trueOrFalse(max = 2) {
     return Math.floor(Math.random() * Math.floor(max));
 }
 
+function scrollDown() {
+    $('html, body').animate({
+        scrollTop: $(".why").offset().top
+    }, 1000);
+}
+
 function mockify(text) {
     text = text.toLowerCase().split('');
 
@@ -74,10 +80,19 @@ function handleCopyClick() {
     });
 }
 
+function handleFooterClick() {
+    $('footer').on('click', 'a', () => {
+        event.preventDefault();
+        $('.why').css('display', 'block');
+        setTimeout(() => scrollDown(), 500);
+    })
+}
+
 function main() {
     handleTyping();
     handleMouse();
     handleCopyClick();
+    handleFooterClick();
 }
 
 $(main);
