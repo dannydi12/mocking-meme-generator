@@ -1,6 +1,16 @@
+// Printing Functions
+
 function printMeme(text) {
     $('.js-render-text').html(`<pre>${text}<div class="hidden copy js-copy fadeInUp animated"></div></pre>`);
 }
+
+function showResults() {
+    if ($('.js-toggle').hasClass('hidden')) {
+        $('.js-toggle').removeClass('hidden')
+    }
+}
+
+// Helper Functions
 
 function trueOrFalse(max = 2) {
     return Math.floor(Math.random() * Math.floor(max));
@@ -23,23 +33,8 @@ function mockify(text) {
     return text.join('');
 }
 
-function resizing(textarea) {
-    if ($(textarea).val().length >= 75) {
-        $('.box').css('text-align', 'left')
-    }
-
-    $(textarea).height('inherit');
-    $(textarea).height(textarea.scrollHeight + 'px');
-}
-
 function grabText() {
     return $('#js-meme-text').val().replace(/[<>]/gi, '');
-}
-
-function showResults() {
-    if ($('.js-toggle').hasClass('hidden')) {
-        $('.js-toggle').removeClass('hidden')
-    }
 }
 
 function copyText(text) {
@@ -47,10 +42,21 @@ function copyText(text) {
     document.execCommand("copy");
 }
 
+// Display-related Functions
+
 function notify() {
     $('.notification').css({'display': 'block'});
     setTimeout( () => $('.notification').addClass('fadeOutDown'), 3000);
     setTimeout( () => $('.notification').removeClass('fadeOutDown'), 1000);
+}
+
+function resizing(textarea) {
+    if ($(textarea).val().length >= 75) {
+        $('.box').css('text-align', 'left')
+    }
+
+    $(textarea).height('inherit');
+    $(textarea).height(textarea.scrollHeight + 'px');
 }
 
 /* Event Listeners */
