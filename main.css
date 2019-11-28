@@ -1,3 +1,5 @@
+/* Global */
+
 body {
     background: #fc0;
     color: #000;
@@ -20,6 +22,24 @@ main {
 
 .hidden {
     display: none;
+}
+
+a {
+    color: #000;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* Conversion Section */
+
+.conversion-section {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
 }
 
 form {
@@ -69,30 +89,7 @@ pre {
     margin-bottom: 50px;
 }
 
-.conversion-section {
-    width: 100%;
-    max-width: 500px;
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-}
-
-footer {
-    width: 100%;
-    position: relative;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-}
-
-a {
-    color: #000;
-}
-
-a:hover {
-    text-decoration: none;
-}
+/* Snackbar */
 
 .notification {
     position: fixed;
@@ -106,6 +103,17 @@ a:hover {
     background-color: #000;
     color: #eee;
     display: none;
+}
+
+/* Footer Section */
+
+footer {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
 
 .why {
