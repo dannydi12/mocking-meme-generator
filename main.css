@@ -9,6 +9,8 @@ body {
 
 h1 {
     font-family: 'Francois One', sans-serif;
+    font-size: 3em;
+    margin-bottom: 0;
 }
 
 main {
@@ -17,7 +19,7 @@ main {
     align-items: center;
     text-align: center;
     padding: 20px;
-    min-height: 100vh;
+    min-height: 93vh;
 }
 
 .hidden {
