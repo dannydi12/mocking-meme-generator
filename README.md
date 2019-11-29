@@ -29,7 +29,7 @@ Background Information:
 
 ## Demo
 
-- [Live Demo](https://dannydi12.github.io/tunezilla/)
+- [Live Demo](https://dannydi12.github.io/mocking-text-generator/)
 
 ## Authors
 
