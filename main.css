@@ -128,7 +128,7 @@ footer {
 }
 
 .why h2 {
-    font-size: 150px;
+    font-size: 100px;
     color: #fc0;
     margin: 0;
 }
@@ -153,6 +153,10 @@ footer {
 
     .box {
         width: 90%;
+    }
+
+    .why h2 {
+        font-size: 150px;
     }
 
     .why p {
