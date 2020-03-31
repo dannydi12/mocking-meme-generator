@@ -37,8 +37,21 @@ function grabText() {
     return $('#js-meme-text').val().replace(/[<>]/gi, '');
 }
 
-function copyText(text) {
+function copyText(copyMe) {
+    const text = document.createElement('textarea');
+    text.setAttribute('readonly', '');
+    text.style.position = 'absolute';
+    text.style.left = '-9999px';
+    text.value = copyMe[0].textContent;
+
+    document.body.appendChild(text);
     text.select();
+    document.execCommand('copy');
+    document.body.removeChild(text);
+
+    console.log()
+
+    copyMe.select();
     document.execCommand("copy");
 }
 
