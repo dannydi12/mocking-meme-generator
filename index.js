@@ -49,8 +49,6 @@ function copyText(copyMe) {
     document.execCommand('copy');
     document.body.removeChild(text);
 
-    console.log()
-
     copyMe.select();
     document.execCommand("copy");
 }
