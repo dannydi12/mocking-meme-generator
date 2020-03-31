@@ -8,9 +8,9 @@ body {
 }
 
 h1 {
-    font-family: 'Francois One', sans-serif;
     font-size: 2em;
     margin-bottom: 0;
+    font-weight: 900;
 }
 
 main {
